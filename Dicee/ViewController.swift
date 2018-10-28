@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
+    @IBOutlet weak var resultDiceView: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +27,26 @@ class ViewController: UIViewController {
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         updateDiceImages()
         
-        let messageUser = "Your first number \(randomDiceIndex1+1) and second number \(randomDiceIndex2+1)"
-        
-        let alert = UIAlertController(title: "NIce, You got it!", message: messageUser, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured.")
-        }))
-        self.present(alert, animated: true, completion: nil)
+//        let alert = UIAlertController(title: "NIce, You got it!", message: messageUser, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+//            NSLog("The \"OK\" alert occured.")
+//        }))
+//        self.present(alert, animated: true, completion: nil)
         
     }
     
     func updateDiceImages() {
+        let messageUser = "Your first number \(randomDiceIndex1+1) and second number \(randomDiceIndex2+1)"
         
         randomDiceIndex1 = Int(arc4random_uniform(6))
         randomDiceIndex2 = Int(arc4random_uniform(6))
         
         diceImageView1.image = UIImage(named: diceArray[randomDiceIndex1])
         diceImageView2.image = UIImage(named: diceArray[randomDiceIndex2])
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        updateDiceImages()
     }
     
 }
