@@ -6,6 +6,8 @@
 
 Aplication using Storyboard and Swift
 
+![Dice-app](dicee-apps-danilags.jpeg)
+
 ## How to use
 ```
 > git clone https://github.com/danilags/dicee-danilags.git
@@ -13,6 +15,10 @@ Aplication using Storyboard and Swift
 > Choose your IOS Simulator
 > Build and run 
 ```
+
+
+
+
 
 #### Authors
 |Name           |Github                          |
