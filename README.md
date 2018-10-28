@@ -4,9 +4,9 @@
 
 #### Descriptions
 
-Aplication using Storyboard and Swift
+Aplication using Storyboard and Swift 
 
-![Dice-app](dicee-apps-danilags.jpeg)
+<img src="dicee-apps-danilags.jpeg" width="250">
 
 ## How to use
 ```
